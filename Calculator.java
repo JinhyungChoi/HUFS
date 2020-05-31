@@ -8,10 +8,10 @@ public class Calculator {
 		System.out.println("Input Y: ");
 		String inputY = sc.nextLine();
 		String temp;
-		if (inputX.charAt(0) == '-' && inputY.charAt(0)=='-') { // ¸ğµÎ À½¼ö
+		if (inputX.charAt(0) == '-' && inputY.charAt(0)=='-') { // ëª¨ë‘ ìŒìˆ˜
 			inputX = inputX.substring(1,inputX.length());
 			inputY = inputY.substring(1,inputY.length());
-			if (inputX.length()<inputY.length()) { //inputX ±æÀÌ < inputY ±æÀÌ
+			if (inputX.length()<inputY.length()) { //inputX ê¸¸ì´ < inputY ê¸¸ì´
 				temp=inputX;
 				inputX = inputY;
 				inputY = temp;
@@ -23,8 +23,8 @@ public class Calculator {
 				System.out.println();
 				System.out.print("X*Y = ");
 				mult(inputX,inputY);
-			} //inputX ±æÀÌ < inputY ±æÀÌ
-			else if (inputX.length() == inputY.length()) { // inputX ±æÀÌ == input Y±æÀÌ
+			} //inputX ê¸¸ì´ < inputY ê¸¸ì´
+			else if (inputX.length() == inputY.length()) { // inputX ê¸¸ì´ == input Yê¸¸ì´
 				int i=0;
 				if (inputX.equals(inputY)) {
 					System.out.print("X+Y = -" );
@@ -47,7 +47,6 @@ public class Calculator {
 						System.out.println();
 						System.out.print("X*Y = ");
 						mult(inputX,inputY);
-						
 						break;
 					}
 					else if(x==y)
@@ -67,7 +66,7 @@ public class Calculator {
 						break;
 					}		
 				}
-			}// inputX ±æÀÌ == input Y±æÀÌ
+			}// inputX ê¸¸ì´ == input Yê¸¸ì´
 			else {
 				System.out.print("X+Y = -" );
 				add(inputX, inputY);
@@ -77,9 +76,9 @@ public class Calculator {
 				System.out.println();
 				System.out.print("X*Y = ");
 				mult(inputX, inputY);
-			}// inputX±æÀÌ > inputY ±æÀÌ			
-		}// ¸ğµÎ À½¼ö
-		else if (inputX.charAt(0) != '-' && inputY.charAt(0) == '-') { // X: ¾ç¼ö / Y: À½¼ö
+			}// inputXê¸¸ì´ > inputY ê¸¸ì´			
+		}// ëª¨ë‘ ìŒìˆ˜
+		else if (inputX.charAt(0) != '-' && inputY.charAt(0) == '-') { // X: ì–‘ìˆ˜ / Y: ìŒìˆ˜
 			inputY = inputY.substring(1,inputY.length());
 			if (inputX.length()<inputY.length()) {
 				temp=inputX;
@@ -93,7 +92,7 @@ public class Calculator {
 				System.out.println();
 				System.out.print("X*Y = -");
 				mult(inputX,inputY);
-			} //inputX ±æÀÌ < inputY ±æÀÌ
+			} //inputX ê¸¸ì´ < inputY ê¸¸ì´
 			else if (inputX.length() == inputY.length()) {
 				int i=0;
 				if (inputX.equals(inputY)) {
@@ -137,7 +136,7 @@ public class Calculator {
 						break;
 					}		
 				}
-			}// inputX±æÀÌ == inputY±æÀÌ
+			}// inputXê¸¸ì´ == inputYê¸¸ì´
 			else {
 				System.out.print("X+Y = " );
 				sub(inputX, inputY);
@@ -147,10 +146,10 @@ public class Calculator {
 				System.out.println();
 				System.out.print("X*Y = -");
 				mult(inputX, inputY);
-			}// inputX±æÀÌ > inputY ±æÀÌ
+			}// inputXê¸¸ì´ > inputY ê¸¸ì´
 			
-		}// X: ¾ç¼ö / Y: À½¼ö
-		else if (inputX.charAt(0) == '-' && inputY.charAt(0) != '-'){ // X : À½¼ö / Y: ¾ç¼ö
+		}// X: ì–‘ìˆ˜ / Y: ìŒìˆ˜
+		else if (inputX.charAt(0) == '-' && inputY.charAt(0) != '-'){ // X : ìŒìˆ˜ / Y: ì–‘ìˆ˜
 			inputX = inputX.substring(1,inputX.length());
 			if (inputX.length()<inputY.length()) {
 				temp=inputX;
@@ -164,7 +163,7 @@ public class Calculator {
 				System.out.println();
 				System.out.print("X*Y = -");
 				mult(inputX,inputY);
-			} //inputX ±æÀÌ < inputY ±æÀÌ
+			} //inputX ê¸¸ì´ < inputY ê¸¸ì´
 			else if (inputX.length() == inputY.length()) {
 				int i=0;
 				if (inputX.equals(inputY)) {
@@ -208,7 +207,7 @@ public class Calculator {
 						break;
 					}		
 				}
-			}// inputX±æÀÌ == inputY±æÀÌ
+			}// inputXê¸¸ì´ == inputYê¸¸ì´
 			else {
 				System.out.print("X+Y = -" );
 				sub(inputX, inputY);
@@ -218,9 +217,9 @@ public class Calculator {
 				System.out.println();
 				System.out.print("X*Y = -");
 				mult(inputX, inputY);
-			}// inputX±æÀÌ > inputY ±æÀÌ
-		}// X : À½¼ö / Y: ¾ç¼ö
-		else { // ¸ğµÎ ¾ç¼ö
+			}// inputXê¸¸ì´ > inputY ê¸¸ì´
+		}// X : ìŒìˆ˜ / Y: ì–‘ìˆ˜
+		else { // ëª¨ë‘ ì–‘ìˆ˜
 			if (inputX.length()<inputY.length()) {
 				temp=inputX;
 				inputX = inputY;
@@ -233,7 +232,7 @@ public class Calculator {
 				System.out.println();
 				System.out.print("X*Y = ");
 				mult(inputX,inputY);
-			} //inputX ±æÀÌ < inputY ±æÀÌ
+			} //inputX ê¸¸ì´ < inputY ê¸¸ì´
 			else if (inputX.length() == inputY.length()) {
 				int i=0;
 				if (inputX.equals(inputY)) {
@@ -277,7 +276,7 @@ public class Calculator {
 						break;
 					}		
 				}
-			}// inputX±æÀÌ == inputY±æÀÌ
+			}// inputXê¸¸ì´ == inputYê¸¸ì´
 			else {
 				System.out.print("X+Y = " );
 				add(inputX, inputY);
@@ -287,8 +286,8 @@ public class Calculator {
 				System.out.println();
 				System.out.print("X*Y = ");
 				mult(inputX, inputY);
-			}// inputX±æÀÌ > inputY ±æÀÌ
-		}// µÎ¼ö ¸ğµÎ ¾ç¼ö
+			}// inputXê¸¸ì´ > inputY ê¸¸ì´
+		}// ë‘ìˆ˜ ëª¨ë‘ ì–‘ìˆ˜
 		
 		
 			
